@@ -67,51 +67,79 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase" href="courses.html">Courses</a>
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase" href="admin.html">Admin</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase" href="cart.html">Cart</a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div
-      id="courseDiv"
-      class="d-flex flex-wrap mt-4 justify-content-evenly"
-    ></div>
-    <!-- <div class="container" id="courseDiv">
-      <section class="page-section">
-        <div class="container">
-          <div class="product-item">
-            <div class="product-item-title d-flex">
-              <div class="bg-faded p-5 d-flex ms-auto rounded">
-                <h2 class="section-heading mb-0">
-                  <span id="courseSubject" class="section-heading-upper"></span>
-                  <span id="courseName" class="section-heading-lower"></span>
-                </h2>
-              </div>
-            </div>
-            <img
-              class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-              src="assets\img\course1.jpg"
-              alt="..."
-            />
-            <div class="product-item-description d-flex me-auto">
-              <div class="bg-faded p-5 rounded">
-                <p id="coarseDescription" class="mb-0"></p>
+    <div class="container">
+      <div class="tab">
+        <button
+          id="defaultOpen"
+          class="tablinks nav-link text-uppercase"
+          onclick="openCity(event, 'Courses')"
+        >
+          Courses
+        </button>
+        <button
+          class="tablinks nav-link text-uppercase"
+          onclick="openCity(event, 'Cart')"
+        >
+          Cart
+        </button>
+        <button
+          class="tablinks nav-link text-uppercase"
+          onclick="openCity(event, 'Admin')"
+        >
+          Admin
+        </button>
+      </div>
+    </div>
 
-                <div class="intro-button mx-auto">
-                  <a class="btn btn-primary btn-l" href="#!">Sign up!</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div id="Courses" class="tabcontent">
+      <div
+        id="courseDiv"
+        class="d-flex flex-wrap mt-4 justify-content-evenly"
+      ></div>
+    </div>
+
+    <div id="Cart" class="tabcontent">
+      <div class="d-flex flex-wrap mt-4 justify-content-evenly">
+        <div class="card text-dark bg-primary mb-3">
+          <div class="card-header bg-secondary text-faded">Kundvagn</div>
+          <div id="cartDiv" class="card-body"></div>
         </div>
-      </section>
-    </div> -->
+      </div>
+    </div>
+
+    <div id="Admin" class="tabcontent">
+      <!-- Modal Btn -->
+      <div class="container d-flex tablinks nav-link text-uppercase rounded">
+        <button id="myBtn" class="">Open Modal</button>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content bg-body">
+          <span class="close">&times;</span>
+          <form class="" id="courseForm">
+            <label for="courseTitle">Course title:</label><br />
+            <input type="text" id="courseTitle" name="courseTitle" /><br />
+            <label for="courseDescription">Course discription:</label><br />
+            <input
+              type="text"
+              id="courseDescription"
+              name="courseDescription"
+            /><br />
+            <label for="courseLength">Length of the course:</label><br />
+            <input type="text" id="courseLength" name="courseLength" /><br />
+
+            <input type="button" onclick="newCourse()" value="Add Course" />
+          </form>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
