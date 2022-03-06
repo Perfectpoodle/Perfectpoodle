@@ -13,8 +13,7 @@ class Course {
 courseList.push(new Course(1 , "Javascript", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facere odit perspiciatis optio nesciunt sequi animi corporis, iste ipsam vitae quis tenetur doloremque. Ipsum consectetur quia provident, necessitatibus fugit ut!", 4 ))
 courseList.push(new Course(2 , "C++", "Officia facere odit perspiciatis optio nesciunt sequi animi corporis, iste ipsam vitae quis tenetur doloremque. Ipsum consectetur quia provident, necessitatibus fugit ut!", 4))
 courseList.push(new Course(3 , "SQL", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facere odit perspiciatis optio nesciunt sequi animi corporis, iste ipsam vitae quis tenetur doloremque. Ipsum consectetur quia provident, necessitatibus fugit ut!", 4))
-courseCart.push(courseList[1]);
-courseCart.push(courseList[2]);
+
 
 //Presentera kurserna
 for (let i = 0; i < courseList.length; i++) {
